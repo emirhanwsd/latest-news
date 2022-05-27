@@ -48,7 +48,7 @@ const App = () => {
     return (
         <>
             <div className="text-zinc-900 bg-white dark:bg-zinc-900 dark:text-zinc-100 transition-colors">
-                <nav className="px-96 py-6 flex items-center justify-between border-b border-zinc-100 dark:border-zinc-700 transition-border">
+                <nav className="sm:px-96 px-8 py-6 flex items-center justify-between border-b border-zinc-100 dark:border-zinc-700 transition-border">
                     <h1 className="text-3xl font-bold font-playfair tracking-wide">Latest News</h1>
 
                     {mode === "light"
@@ -63,11 +63,11 @@ const App = () => {
                     }
                 </nav>
 
-                <header className="px-96 py-6 flex gap-x-6">
-                    <div className="w-[28rem] flex flex-col gap-y-4">
+                <header className="sm:px-96 px-8 py-6 flex flex-col sm:flex-row gap-x-6">
+                    <div className="sm:w-[28rem] flex flex-col gap-y-4">
                         {data.articles[0].urlToImage
                             ?
-                                <a className="w-[28rem] h-72 hover:opacity-90 transition-opacity" href={data.articles[0].url}>
+                                <a className="sm:w-[28rem] h-72 hover:opacity-90 transition-opacity" href={data.articles[0].url}>
                                     <img className="rounded shadow h-full" src={data.articles[0].urlToImage} alt={data.articles[0].title}/>
                                 </a>
                             :
@@ -87,7 +87,7 @@ const App = () => {
                         </div>
                     </div>
 
-                    <div className="w-96 flex flex-col gap-y-6 mr-6">
+                    <div className="sm:w-96 flex flex-col gap-y-6 mr-6 sm:py-0 py-6">
                         <div className="h-28 flex gap-x-4">
                             {data.articles[1].urlToImage
                                 ?
@@ -244,17 +244,17 @@ const App = () => {
                     </div>
                 </header>
 
-                <div className="px-96 pt-6 pb-12 flex flex-col gap-y-6">
+                <div className="sm:px-96 px-8 pt-6 pb-12 flex flex-col gap-y-6">
                     <h1 className="text-lg leading-loose font-semibold border-b border-zinc-200 dark:border-zinc-500 transition-border">
                         <span className="inline-block -mb-1 border-b border-zinc-400 dark:border-zinc-300 transition-border">Today Highlight</span>
                     </h1>
 
                     <div className="flex flex-wrap gap-x-16 gap-y-12">
-                        <div className="max-w-lg flex gap-x-4">
-                            {data.articles[8].urlToImage
+                        <div className="max-w-lg flex sm:flex-row flex-col gap-x-4 gap-y-4">
+                            {data.articles[17].urlToImage
                                 ?
-                                <a className="h-48 w-56 hover:opacity-90 transition-opacity" href={data.articles[8].url}>
-                                    <img className="rounded shadow w-72 h-full" src={data.articles[8].urlToImage} alt={data.articles[8].title}/>
+                                <a className="h-48 sm:w-56 hover:opacity-90 transition-opacity" href={data.articles[17].url}>
+                                    <img className="rounded shadow sm:w-56 h-full" src={data.articles[17].urlToImage} alt={data.articles[17].title}/>
                                 </a>
                                 :
                                 <div className="rounded shadow flex items-center justify-center w-56 bg-zinc-900 dark:bg-zinc-50 transition-colors cursor-not-allowed">
@@ -263,23 +263,23 @@ const App = () => {
                             }
 
                             <div className="flex flex-1 flex-col justify-between py-2">
-                                <a href={data.articles[8].url} className="font-semibold hover:opacity-90 transition-opacity line-clamp-2">{data.articles[8].title}</a>
+                                <a href={data.articles[17].url} className="font-semibold hover:opacity-90 transition-opacity line-clamp-2">{data.articles[17].title}</a>
 
-                                <p className="text-sm line-clamp-3 text-zinc-500 dark:text-zinc-300 transition-colors max-w-sm">{data.articles[8].description}</p>
+                                <p className="text-sm line-clamp-3 text-zinc-500 dark:text-zinc-300 transition-colors max-w-sm">{data.articles[17].description}</p>
 
                                 <div className="space-y-1">
-                                    <h4 className="text-xs">{data.articles[8].source.name} <span className="text-zinc-500 dark:text-zinc-300 transition-colors">•</span> {dayjs(data.articles[8].publishedAt).format("MMM D, YYYY")}</h4>
+                                    <h4 className="text-xs">{data.articles[17].source.name} <span className="text-zinc-500 dark:text-zinc-300 transition-colors">•</span> {dayjs(data.articles[17].publishedAt).format("MMM D, YYYY")}</h4>
 
-                                    <h6 className="text-xs"><span className="text-zinc-500 dark:text-zinc-300 transition-colors">from </span> {data.articles[8].author}</h6>
+                                    <h6 className="text-xs"><span className="text-zinc-500 dark:text-zinc-300 transition-colors">from </span> {data.articles[17].author}</h6>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="max-w-lg flex gap-x-4">
+                        <div className="max-w-lg flex sm:flex-row flex-col gap-x-4 gap-y-4">
                             {data.articles[16].urlToImage
                                 ?
-                                <a className="h-48 w-56 hover:opacity-90 transition-opacity" href={data.articles[16].url}>
-                                    <img className="rounded shadow w-72 h-full" src={data.articles[16].urlToImage} alt={data.articles[16].title}/>
+                                <a className="h-48 sm:w-56 hover:opacity-90 transition-opacity" href={data.articles[16].url}>
+                                    <img className="rounded shadow sm:w-56 h-full" src={data.articles[16].urlToImage} alt={data.articles[16].title}/>
                                 </a>
                                 :
                                 <div className="rounded shadow flex items-center justify-center w-56 bg-zinc-900 dark:bg-zinc-50 transition-colors cursor-not-allowed">
@@ -300,11 +300,11 @@ const App = () => {
                             </div>
                         </div>
 
-                        <div className="max-w-lg flex gap-x-4">
+                        <div className="max-w-lg flex sm:flex-row flex-col gap-x-4 gap-y-4">
                             {data.articles[10].urlToImage
                                 ?
-                                <a className="h-48 w-56 hover:opacity-90 transition-opacity" href={data.articles[10].url}>
-                                    <img className="rounded shadow w-72 h-full" src={data.articles[10].urlToImage} alt={data.articles[10].title}/>
+                                <a className="h-48 sm:w-56 hover:opacity-90 transition-opacity" href={data.articles[10].url}>
+                                    <img className="rounded shadow sm:w-56 h-full" src={data.articles[10].urlToImage} alt={data.articles[10].title}/>
                                 </a>
                                 :
                                 <div className="rounded shadow flex items-center justify-center w-56 bg-zinc-900 dark:bg-zinc-50 transition-colors cursor-not-allowed">
@@ -325,11 +325,11 @@ const App = () => {
                             </div>
                         </div>
 
-                        <div className="max-w-lg flex gap-x-4">
+                        <div className="max-w-lg flex sm:flex-row flex-col gap-x-4 gap-y-4">
                             {data.articles[11].urlToImage
                                 ?
-                                <a className="h-48 w-56 hover:opacity-90 transition-opacity" href={data.articles[11].url}>
-                                    <img className="rounded shadow w-72 h-full" src={data.articles[11].urlToImage} alt={data.articles[11].title}/>
+                                <a className="h-48 sm:w-56 hover:opacity-90 transition-opacity" href={data.articles[11].url}>
+                                    <img className="rounded shadow sm:w-56 h-full" src={data.articles[11].urlToImage} alt={data.articles[11].title}/>
                                 </a>
                                 :
                                 <div className="rounded shadow flex items-center justify-center w-56 bg-zinc-900 dark:bg-zinc-50 transition-colors cursor-not-allowed">
