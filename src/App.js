@@ -7,7 +7,7 @@ const App = () => {
 
     const [mode, setMode] = useState(localStorage.getItem("mode") ?? "light")
 
-    const {isLoading, data, isError, error} = useQuery("news", async () => {
+    const {isLoading, data, isError} = useQuery("news", async () => {
         let result = await fetch("https://newsapi.org/v2/top-headlines?country=gb&apiKey=597579686db64259820835d2e337eda7")
 
         return result.json()
@@ -253,11 +253,11 @@ const App = () => {
                         <div className="max-w-lg flex sm:flex-row flex-col gap-x-4 gap-y-4">
                             {data.articles[17].urlToImage
                                 ?
-                                <a className="h-48 sm:w-56 hover:opacity-90 transition-opacity" href={data.articles[17].url}>
-                                    <img className="rounded shadow sm:w-56 w-full h-full" src={data.articles[17].urlToImage} alt={data.articles[17].title}/>
+                                <a className="h-48 sm:w-64 hover:opacity-90 transition-opacity" href={data.articles[17].url}>
+                                    <img className="rounded shadow sm:w-64 w-full h-full" src={data.articles[17].urlToImage} alt={data.articles[17].title}/>
                                 </a>
                                 :
-                                <div className="rounded shadow flex items-center justify-center h-48 sm:w-56 bg-zinc-900 dark:bg-zinc-50 transition-colors cursor-not-allowed">
+                                <div className="rounded shadow flex items-center justify-center h-48 sm:w-64 bg-zinc-900 dark:bg-zinc-50 transition-colors cursor-not-allowed">
                                     <TemplateIcon className="h-6 w-6 text-zinc-300 dark:text-zinc-500 transition-colors"/>
                                 </div>
                             }
@@ -278,11 +278,11 @@ const App = () => {
                         <div className="max-w-lg flex sm:flex-row flex-col gap-x-4 gap-y-4">
                             {data.articles[16].urlToImage
                                 ?
-                                <a className="h-48 sm:w-56 hover:opacity-90 transition-opacity" href={data.articles[16].url}>
-                                    <img className="rounded shadow sm:w-56 w-full h-full" src={data.articles[16].urlToImage} alt={data.articles[16].title}/>
+                                <a className="h-48 sm:w-64 hover:opacity-90 transition-opacity" href={data.articles[16].url}>
+                                    <img className="rounded shadow sm:w-64 w-full h-full" src={data.articles[16].urlToImage} alt={data.articles[16].title}/>
                                 </a>
                                 :
-                                <div className="rounded shadow flex items-center justify-center h-48 sm:w-56 bg-zinc-900 dark:bg-zinc-50 transition-colors cursor-not-allowed">
+                                <div className="rounded shadow flex items-center justify-center h-48 sm:w-64 bg-zinc-900 dark:bg-zinc-50 transition-colors cursor-not-allowed">
                                     <TemplateIcon className="h-6 w-6 text-zinc-300 dark:text-zinc-500 transition-colors"/>
                                 </div>
                             }
@@ -303,11 +303,11 @@ const App = () => {
                         <div className="max-w-lg flex sm:flex-row flex-col gap-x-4 gap-y-4">
                             {data.articles[10].urlToImage
                                 ?
-                                <a className="h-48 sm:w-56 hover:opacity-90 transition-opacity" href={data.articles[10].url}>
-                                    <img className="rounded shadow sm:w-56 w-full h-full" src={data.articles[10].urlToImage} alt={data.articles[10].title}/>
+                                <a className="h-48 sm:w-64 hover:opacity-90 transition-opacity" href={data.articles[10].url}>
+                                    <img className="rounded shadow sm:w-64 w-full h-full" src={data.articles[10].urlToImage} alt={data.articles[10].title}/>
                                 </a>
                                 :
-                                <div className="rounded shadow flex items-center justify-center h-48 sm:w-56 bg-zinc-900 dark:bg-zinc-50 transition-colors cursor-not-allowed">
+                                <div className="rounded shadow flex items-center justify-center h-48 sm:w-64 bg-zinc-900 dark:bg-zinc-50 transition-colors cursor-not-allowed">
                                     <TemplateIcon className="h-6 w-6 text-zinc-300 dark:text-zinc-500 transition-colors"/>
                                 </div>
                             }
@@ -328,11 +328,11 @@ const App = () => {
                         <div className="max-w-lg flex sm:flex-row flex-col gap-x-4 gap-y-4">
                             {data.articles[11].urlToImage
                                 ?
-                                <a className="h-48 sm:w-56 hover:opacity-90 transition-opacity" href={data.articles[11].url}>
-                                    <img className="rounded shadow sm:w-56 w-full h-full" src={data.articles[11].urlToImage} alt={data.articles[11].title}/>
+                                <a className="h-48 sm:w-64 hover:opacity-90 transition-opacity" href={data.articles[11].url}>
+                                    <img className="rounded shadow sm:w-64 w-full h-full" src={data.articles[11].urlToImage} alt={data.articles[11].title}/>
                                 </a>
                                 :
-                                <div className="rounded shadow flex items-center justify-center h-48 sm:w-56 bg-zinc-900 dark:bg-zinc-50 transition-colors cursor-not-allowed">
+                                <div className="rounded shadow flex items-center justify-center h-48 sm:w-64 bg-zinc-900 dark:bg-zinc-50 transition-colors cursor-not-allowed">
                                     <TemplateIcon className="h-6 w-6 text-zinc-300 dark:text-zinc-500 transition-colors"/>
                                 </div>
                             }
