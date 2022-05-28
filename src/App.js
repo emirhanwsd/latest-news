@@ -135,10 +135,10 @@ const App = () => {
                         </div>
 
                         <div className="h-28 flex gap-x-4">
-                            {data.articles[14].urlToImage
+                            {data.articles[3].urlToImage
                                 ?
-                                <a className="w-36 hover:opacity-90 transition-opacity" href={data.articles[14].url}>
-                                    <img className="rounded shadow w-36 h-full" src={data.articles[14].urlToImage} alt={data.articles[14].title}/>
+                                <a className="w-36 hover:opacity-90 transition-opacity" href={data.articles[3].url}>
+                                    <img className="rounded shadow w-36 h-full" src={data.articles[3].urlToImage} alt={data.articles[3].title}/>
                                 </a>
                                 :
                                 <div className="rounded shadow flex items-center justify-center w-36 bg-zinc-900 dark:bg-zinc-50 transition-colors cursor-not-allowed">
@@ -147,12 +147,12 @@ const App = () => {
                             }
 
                             <div className="flex flex-1 flex-col justify-between py-1">
-                                <a href={data.articles[14].url} className="font-semibold hover:opacity-90 transition-opacity line-clamp-2">{data.articles[14].title}</a>
+                                <a href={data.articles[3].url} className="font-semibold hover:opacity-90 transition-opacity line-clamp-2">{data.articles[3].title}</a>
 
                                 <div className="space-y-1">
-                                    <h4 className="text-xs">{data.articles[14].source.name} <span className="text-zinc-500 dark:text-zinc-300 transition-colors">•</span> {dayjs(data.articles[14].publishedAt).format("MMM D, YYYY")}</h4>
+                                    <h4 className="text-xs">{data.articles[3].source.name} <span className="text-zinc-500 dark:text-zinc-300 transition-colors">•</span> {dayjs(data.articles[3].publishedAt).format("MMM D, YYYY")}</h4>
 
-                                    <h6 className="text-xs break-all"><span className="text-zinc-500 dark:text-zinc-300 transition-colors">from </span> {data.articles[14].author}</h6>
+                                    <h6 className="text-xs break-all"><span className="text-zinc-500 dark:text-zinc-300 transition-colors">from </span> {data.articles[3].author}</h6>
                                 </div>
                             </div>
                         </div>
@@ -218,12 +218,12 @@ const App = () => {
                             <span className="w-8 text-2xl text-zinc-300 dark:text-zinc-500 transition-colors">03</span>
 
                             <div className="flex flex-1 flex-col justify-between">
-                                <a href={data.articles[13].url} className="font-semibold hover:opacity-90 transition-opacity line-clamp-2">{data.articles[13].title}</a>
+                                <a href={data.articles[7].url} className="font-semibold hover:opacity-90 transition-opacity line-clamp-2">{data.articles[7].title}</a>
 
                                 <div className="space-y-1">
-                                    <h4 className="text-xs">{data.articles[13].source.name} <span className="text-zinc-500 dark:text-zinc-300 transition-colors">•</span> {dayjs(data.articles[13].publishedAt).format("MMM D, YYYY")}</h4>
+                                    <h4 className="text-xs">{data.articles[7].source.name} <span className="text-zinc-500 dark:text-zinc-300 transition-colors">•</span> {dayjs(data.articles[7].publishedAt).format("MMM D, YYYY")}</h4>
 
-                                    <h6 className="text-xs break-all"><span className="text-zinc-500 dark:text-zinc-300 transition-colors">from </span> {data.articles[13].author}</h6>
+                                    <h6 className="text-xs break-all"><span className="text-zinc-500 dark:text-zinc-300 transition-colors">from </span> {data.articles[7].author}</h6>
                                 </div>
                             </div>
                         </div>
@@ -251,10 +251,10 @@ const App = () => {
 
                     <div className="flex flex-wrap gap-x-16 gap-y-12">
                         <div className="max-w-lg flex sm:flex-row flex-col gap-x-4 gap-y-4">
-                            {data.articles[17].urlToImage
+                            {data.articles[9].urlToImage
                                 ?
-                                <a className="h-48 sm:w-64 hover:opacity-90 transition-opacity" href={data.articles[17].url}>
-                                    <img className="rounded shadow sm:w-64 w-full h-full" src={data.articles[17].urlToImage} alt={data.articles[17].title}/>
+                                <a className="h-48 sm:w-64 hover:opacity-90 transition-opacity" href={data.articles[9].url}>
+                                    <img className="rounded shadow sm:w-64 w-full h-full" src={data.articles[9].urlToImage} alt={data.articles[9].title}/>
                                 </a>
                                 :
                                 <div className="rounded shadow flex items-center justify-center h-48 sm:w-64 bg-zinc-900 dark:bg-zinc-50 transition-colors cursor-not-allowed">
@@ -263,39 +263,14 @@ const App = () => {
                             }
 
                             <div className="flex flex-1 flex-col justify-between py-2">
-                                <a href={data.articles[17].url} className="font-semibold hover:opacity-90 transition-opacity line-clamp-2">{data.articles[17].title}</a>
+                                <a href={data.articles[9].url} className="font-semibold hover:opacity-90 transition-opacity line-clamp-2">{data.articles[9].title}</a>
 
-                                <p className="text-sm line-clamp-3 text-zinc-500 dark:text-zinc-300 transition-colors max-w-sm">{data.articles[17].description}</p>
-
-                                <div className="space-y-1">
-                                    <h4 className="text-xs">{data.articles[17].source.name} <span className="text-zinc-500 dark:text-zinc-300 transition-colors">•</span> {dayjs(data.articles[17].publishedAt).format("MMM D, YYYY")}</h4>
-
-                                    <h6 className="text-xs"><span className="text-zinc-500 dark:text-zinc-300 transition-colors">from </span> {data.articles[17].author}</h6>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="max-w-lg flex sm:flex-row flex-col gap-x-4 gap-y-4">
-                            {data.articles[16].urlToImage
-                                ?
-                                <a className="h-48 sm:w-64 hover:opacity-90 transition-opacity" href={data.articles[16].url}>
-                                    <img className="rounded shadow sm:w-64 w-full h-full" src={data.articles[16].urlToImage} alt={data.articles[16].title}/>
-                                </a>
-                                :
-                                <div className="rounded shadow flex items-center justify-center h-48 sm:w-64 bg-zinc-900 dark:bg-zinc-50 transition-colors cursor-not-allowed">
-                                    <TemplateIcon className="h-6 w-6 text-zinc-300 dark:text-zinc-500 transition-colors"/>
-                                </div>
-                            }
-
-                            <div className="flex flex-1 flex-col justify-between py-2">
-                                <a href={data.articles[16].url} className="font-semibold hover:opacity-90 transition-opacity line-clamp-2">{data.articles[16].title}</a>
-
-                                <p className="text-sm line-clamp-3 text-zinc-500 dark:text-zinc-300 transition-colors max-w-sm">{data.articles[16].description}</p>
+                                <p className="text-sm line-clamp-3 text-zinc-500 dark:text-zinc-300 transition-colors max-w-sm">{data.articles[9].description}</p>
 
                                 <div className="space-y-1">
-                                    <h4 className="text-xs">{data.articles[16].source.name} <span className="text-zinc-500 dark:text-zinc-300 transition-colors">•</span> {dayjs(data.articles[16].publishedAt).format("MMM D, YYYY")}</h4>
+                                    <h4 className="text-xs">{data.articles[9].source.name} <span className="text-zinc-500 dark:text-zinc-300 transition-colors">•</span> {dayjs(data.articles[9].publishedAt).format("MMM D, YYYY")}</h4>
 
-                                    <h6 className="text-xs"><span className="text-zinc-500 dark:text-zinc-300 transition-colors">from </span> {data.articles[16].author}</h6>
+                                    <h6 className="text-xs"><span className="text-zinc-500 dark:text-zinc-300 transition-colors">from </span> {data.articles[9].author}</h6>
                                 </div>
                             </div>
                         </div>
@@ -320,7 +295,7 @@ const App = () => {
                                 <div className="space-y-1">
                                     <h4 className="text-xs">{data.articles[10].source.name} <span className="text-zinc-500 dark:text-zinc-300 transition-colors">•</span> {dayjs(data.articles[10].publishedAt).format("MMM D, YYYY")}</h4>
 
-                                    <h6 className="text-xs"><span className="text-zinc-500 dark:text-zinc-300 transition-colors">from </span> {data.articles[7].author}</h6>
+                                    <h6 className="text-xs"><span className="text-zinc-500 dark:text-zinc-300 transition-colors">from </span> {data.articles[10].author}</h6>
                                 </div>
                             </div>
                         </div>
@@ -346,6 +321,31 @@ const App = () => {
                                     <h4 className="text-xs">{data.articles[11].source.name} <span className="text-zinc-500 dark:text-zinc-300 transition-colors">•</span> {dayjs(data.articles[11].publishedAt).format("MMM D, YYYY")}</h4>
 
                                     <h6 className="text-xs"><span className="text-zinc-500 dark:text-zinc-300 transition-colors">from </span> {data.articles[11].author}</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="max-w-lg flex sm:flex-row flex-col gap-x-4 gap-y-4">
+                            {data.articles[12].urlToImage
+                                ?
+                                <a className="h-48 sm:w-64 hover:opacity-90 transition-opacity" href={data.articles[12].url}>
+                                    <img className="rounded shadow sm:w-64 w-full h-full" src={data.articles[12].urlToImage} alt={data.articles[12].title}/>
+                                </a>
+                                :
+                                <div className="rounded shadow flex items-center justify-center h-48 sm:w-64 bg-zinc-900 dark:bg-zinc-50 transition-colors cursor-not-allowed">
+                                    <TemplateIcon className="h-6 w-6 text-zinc-300 dark:text-zinc-500 transition-colors"/>
+                                </div>
+                            }
+
+                            <div className="flex flex-1 flex-col justify-between py-2">
+                                <a href={data.articles[12].url} className="font-semibold hover:opacity-90 transition-opacity line-clamp-2">{data.articles[12].title}</a>
+
+                                <p className="text-sm line-clamp-3 text-zinc-500 dark:text-zinc-300 transition-colors max-w-sm">{data.articles[12].description}</p>
+
+                                <div className="space-y-1">
+                                    <h4 className="text-xs">{data.articles[12].source.name} <span className="text-zinc-500 dark:text-zinc-300 transition-colors">•</span> {dayjs(data.articles[12].publishedAt).format("MMM D, YYYY")}</h4>
+
+                                    <h6 className="text-xs"><span className="text-zinc-500 dark:text-zinc-300 transition-colors">from </span> {data.articles[12].author}</h6>
                                 </div>
                             </div>
                         </div>
