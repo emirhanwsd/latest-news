@@ -8,7 +8,7 @@ const App = () => {
     const [mode, setMode] = useState(localStorage.getItem("mode") ?? "light")
 
     const {isLoading, data, isError} = useQuery("news", async () => {
-        let result = await fetch("https://newsapi.org/v2/top-headlines?country=gb&apiKey=597579686db64259820835d2e337eda7")
+        let result = await fetch(`https://newsapi.org/v2/top-headlines?country=gb&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`)
 
         return result.json()
     }, {
